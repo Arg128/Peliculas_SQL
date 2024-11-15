@@ -20,7 +20,8 @@ my $query = CGI->new();
 # Recoger los datos del formulario 
 my $campo = $query->param('campo'); 
 my $propiedad = $query->param('propiedad'); 
-my $dato = $query->param('dato'); 
+my $dato = $query->param('datoC'); 
+my $modif = $query->param('dato'); 
 # Conectar a la base de datos 
 my $dbh = DBI->connect($dsn, $user, $password, {
      RaiseError => 1, PrintError => 0, mysql_enable_utf8 => 1, 
@@ -31,9 +32,9 @@ if (!$dbh) {
     die "Error al conectar a la base de datos: $DBI::errstr\n";
 }
     # Construir la consulta SQL 
-    my $sql = "UPDATE $campo SET $propiedad = ?"; 
+    my $sql = "UPDATE $campo SET $propiedad = ? WHERE $propiedad = ?";
     my $sth = $dbh->prepare($sql);
-    if ($sth->execute($dato)) {
+    if ($sth->execute($modif, $dato)) {
         print "<h2>Registro actualizado correctamente</h2>"; 
     } else { 
         print "<h2>Error al actualizar el registro</h2>";
