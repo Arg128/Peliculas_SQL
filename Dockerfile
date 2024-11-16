@@ -12,8 +12,8 @@ COPY cgi-bin/ /usr/lib/cgi-bin/
 # Copiar el archivo de configuración de Nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Exponer el puerto 80
-EXPOSE 80
+# Exponer el puerto 8146
+EXPOSE 8146
 
 # Comando para iniciar Nginx y FastCGI wrapper
 CMD ["sh", "-c", "service fcgiwrap start && nginx -g 'daemon off;'"]
