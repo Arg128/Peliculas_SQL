@@ -4,6 +4,9 @@ FROM nginx:latest
 # Instalar FastCGI wrapper
 ##Esto permite el uso de CGI's dentro de nuestras webb
 RUN apt-get update && apt-get install -y fcgiwrap
+RUN apt-get install -y vim
+RUN apt-get install -y nano
+
 
 # Copiar los archivos de la aplicación web al directorio de Nginx
 COPY html/ /usr/share/nginx/html/
