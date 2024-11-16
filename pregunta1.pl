@@ -5,10 +5,10 @@ use CGI qw(:standard);
 use DBI;
 
 # Configuración de conexión
-my $database = "prueba";
-my $hostname = "mariadb2";         # Nombre del contenedor MariaDB
-my $port     = 3307;               # Puerto predeterminado de MariaDB
-my $user     = "root";             # Usuario de MariaDB
+my $database = "Cine";
+my $hostname = "elSQL";         # Nombre del contenedor MySQL
+my $port     = 3306;               # Puerto predeterminado de MySQL
+my $user     = "root";             # Usuario de MySQL
 my $password = "tu_contraseña_segura"; # Contraseña para el usuario root
 
 # DSN de conexión
