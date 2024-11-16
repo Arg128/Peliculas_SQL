@@ -6,7 +6,7 @@ use DBI;
 
 # Configuración de conexión
 my $database = "Cine";
-my $hostname = "elSQL";         # Nombre del contenedor MySQL
+my $hostname = "db";         # Nombre del contenedor MySQL
 my $port     = 3306;               # Puerto predeterminado de MySQL
 my $user     = "root";             # Usuario de MySQL
 my $password = "tu_contraseña_segura"; # Contraseña para el usuario root
