@@ -13,7 +13,7 @@ services:
     image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: tu_contraseña_segura
-      MYSQL_DATABASE: elSQL
+      MYSQL_DATABASE: Cine
     volumes:
       - db_data:/var/lib/mysql
       - ./init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
